@@ -19,36 +19,28 @@ def intersection(arrays):
             intersect_dict[num] += 1
         else:
             intersect_dict[num] = 1
-    # print(intersect_dict)
-    result = []
-    print(array_volume)
 
-    # results = [values == array_volume for values in intersect_dict.values()]
-    for values == array_volume in intersect_dict.values():
-        result.append(intersect_dict)
-
-    print(results)
-    # squares = [x**2 for x in range(10)]
-    # determine which keys have a value that matches the volume of lists
-    # return list of those values
-
-    # for num in arrays[0]:
-
-    # return result
+    # take all the keys where the value is equal to the volume of lists and add to a list
+    result = [k for k, v in intersect_dict.items() if v == array_volume]
+    return result
 
 
-# if __name__ == "__main__":
-#     arrays = []
+if __name__ == "__main__":
+    arrays = []
 
-#     arrays.append(list(range(1000000, 2000000)) + [1, 2, 3])
-#     arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])
-#     arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
+    arrays.append(list(range(1000000, 2000000)) + [1, 2, 3])
+    arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])
+    arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
 
-#     print(intersection(arrays))
+    print(intersection(arrays))
 
-array1 = [1, 2, 3, 4, 5]
-array2 = [12, 7, 2, 9, 1]
-array3 = [99, 2, 7, 1]
+array1 = [1, 2, 3, 66, 45, 8]
+array2 = [1, 4, 5, 8]
+array3 = [1, 6, 7, 8, 9, 10, 11, 12]
 
 combined_array = [array1, array2, array3]
-intersection(combined_array)
+intersection([
+    [1, 2, 3],
+    [1, 4, 5],
+    [1, 6, 7]]
+)
